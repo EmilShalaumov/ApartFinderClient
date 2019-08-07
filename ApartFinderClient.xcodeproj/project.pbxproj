@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A404D6935AC43D941D15AB2A /* Pods_ApartFinderClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0106429909A8D104E0877ACC /* Pods_ApartFinderClient.framework */; };
 		E410764722F8D0D400EB3EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410764622F8D0D400EB3EBB /* AppDelegate.swift */; };
 		E410764922F8D0D400EB3EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410764822F8D0D400EB3EBB /* ViewController.swift */; };
 		E410764C22F8D0D400EB3EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E410764A22F8D0D400EB3EBB /* Main.storyboard */; };
 		E410764E22F8D0D500EB3EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E410764D22F8D0D500EB3EBB /* Assets.xcassets */; };
 		E410765122F8D0D500EB3EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E410764F22F8D0D500EB3EBB /* LaunchScreen.storyboard */; };
+		E4F6FECF22FB5EE800E18769 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F6FECE22FB5EE800E18769 /* Login.storyboard */; };
+		E4F6FED122FB5F0100E18769 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED022FB5F0100E18769 /* LoginViewController.swift */; };
+		E4F6FED322FB5F3B00E18769 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED222FB5F3B00E18769 /* AppStoryboard.swift */; };
+		E4F6FED522FB5F6500E18769 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED422FB5F6500E18769 /* UIViewController.swift */; };
+		E4F6FED822FB685F00E18769 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED722FB685F00E18769 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0106429909A8D104E0877ACC /* Pods_ApartFinderClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApartFinderClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFE59116D065579B64A11FE /* Pods-ApartFinderClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartFinderClient.debug.xcconfig"; path = "Target Support Files/Pods-ApartFinderClient/Pods-ApartFinderClient.debug.xcconfig"; sourceTree = "<group>"; };
 		E410764322F8D0D400EB3EBB /* ApartFinderClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApartFinderClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E410764622F8D0D400EB3EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E410764822F8D0D400EB3EBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,12 @@
 		E410764D22F8D0D500EB3EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E410765022F8D0D500EB3EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E410765222F8D0D500EB3EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F6FECE22FB5EE800E18769 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E4F6FED022FB5F0100E18769 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E4F6FED222FB5F3B00E18769 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		E4F6FED422FB5F6500E18769 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E4F6FED722FB685F00E18769 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E7312345DA6A3DFC0DD10691 /* Pods-ApartFinderClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartFinderClient.release.xcconfig"; path = "Target Support Files/Pods-ApartFinderClient/Pods-ApartFinderClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A404D6935AC43D941D15AB2A /* Pods_ApartFinderClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9B2FEC0B9A3FFB58D96F78D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CFE59116D065579B64A11FE /* Pods-ApartFinderClient.debug.xcconfig */,
+				E7312345DA6A3DFC0DD10691 /* Pods-ApartFinderClient.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C00D6341BCF45F38EDDE334E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0106429909A8D104E0877ACC /* Pods_ApartFinderClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E410763A22F8D0D400EB3EBB = {
 			isa = PBXGroup;
 			children = (
 				E410764522F8D0D400EB3EBB /* ApartFinderClient */,
 				E410764422F8D0D400EB3EBB /* Products */,
+				A9B2FEC0B9A3FFB58D96F78D /* Pods */,
+				C00D6341BCF45F38EDDE334E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +89,27 @@
 		E410764522F8D0D400EB3EBB /* ApartFinderClient */ = {
 			isa = PBXGroup;
 			children = (
+				E4F6FED622FB684B00E18769 /* DataService */,
 				E410764622F8D0D400EB3EBB /* AppDelegate.swift */,
 				E410764822F8D0D400EB3EBB /* ViewController.swift */,
 				E410764A22F8D0D400EB3EBB /* Main.storyboard */,
 				E410764D22F8D0D500EB3EBB /* Assets.xcassets */,
 				E410764F22F8D0D500EB3EBB /* LaunchScreen.storyboard */,
 				E410765222F8D0D500EB3EBB /* Info.plist */,
+				E4F6FECE22FB5EE800E18769 /* Login.storyboard */,
+				E4F6FED022FB5F0100E18769 /* LoginViewController.swift */,
+				E4F6FED222FB5F3B00E18769 /* AppStoryboard.swift */,
+				E4F6FED422FB5F6500E18769 /* UIViewController.swift */,
 			);
 			path = ApartFinderClient;
+			sourceTree = "<group>";
+		};
+		E4F6FED622FB684B00E18769 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6FED722FB685F00E18769 /* DataService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E410765522F8D0D500EB3EBB /* Build configuration list for PBXNativeTarget "ApartFinderClient" */;
 			buildPhases = (
+				FD8AF309A03449C9B7A171AE /* [CP] Check Pods Manifest.lock */,
 				E410763F22F8D0D400EB3EBB /* Sources */,
 				E410764022F8D0D400EB3EBB /* Frameworks */,
 				E410764122F8D0D400EB3EBB /* Resources */,
+				9616E2D8AE5154AAAA4C7BC5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F6FECF22FB5EE800E18769 /* Login.storyboard in Resources */,
 				E410765122F8D0D500EB3EBB /* LaunchScreen.storyboard in Resources */,
 				E410764E22F8D0D500EB3EBB /* Assets.xcassets in Resources */,
 				E410764C22F8D0D400EB3EBB /* Main.storyboard in Resources */,
@@ -130,13 +181,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9616E2D8AE5154AAAA4C7BC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartFinderClient/Pods-ApartFinderClient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartFinderClient/Pods-ApartFinderClient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApartFinderClient/Pods-ApartFinderClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD8AF309A03449C9B7A171AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApartFinderClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E410763F22F8D0D400EB3EBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F6FED322FB5F3B00E18769 /* AppStoryboard.swift in Sources */,
+				E4F6FED122FB5F0100E18769 /* LoginViewController.swift in Sources */,
 				E410764922F8D0D400EB3EBB /* ViewController.swift in Sources */,
+				E4F6FED822FB685F00E18769 /* DataService.swift in Sources */,
 				E410764722F8D0D400EB3EBB /* AppDelegate.swift in Sources */,
+				E4F6FED522FB5F6500E18769 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +377,7 @@
 		};
 		E410765622F8D0D500EB3EBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CFE59116D065579B64A11FE /* Pods-ApartFinderClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +396,7 @@
 		};
 		E410765722F8D0D500EB3EBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7312345DA6A3DFC0DD10691 /* Pods-ApartFinderClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

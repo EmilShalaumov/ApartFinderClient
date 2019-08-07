@@ -12,10 +12,34 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var token: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "token")
+        } set {
+            UserDefaults.standard.set(newValue, forKey: "token")
+        }
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = .white
+        
+        if token != nil {
+            let mainViewController = ViewController.instantiate(from: .Main)
+            self.window?.rootViewController = mainViewController
+            token = nil
+        } else {
+            let loginViewController = LoginViewController.instantiate(from: .Login)
+            self.window?.rootViewController = loginViewController
+            token = "aaa"
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
