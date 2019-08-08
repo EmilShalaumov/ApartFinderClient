@@ -1,0 +1,6 @@
+framework module Pods_ApartFinderClient {
+  umbrella header "Pods-ApartFinderClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
