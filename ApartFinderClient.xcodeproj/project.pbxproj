@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,7 @@
 		E4F6FED122FB5F0100E18769 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED022FB5F0100E18769 /* LoginViewController.swift */; };
 		E4F6FED322FB5F3B00E18769 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED222FB5F3B00E18769 /* AppStoryboard.swift */; };
 		E4F6FED522FB5F6500E18769 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED422FB5F6500E18769 /* UIViewController.swift */; };
-		E4F6FED822FB685F00E18769 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED722FB685F00E18769 /* DataService.swift */; };
+		E4F6FEDA22FCB54E00E18769 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6FED922FCB54E00E18769 /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		E4F6FED022FB5F0100E18769 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4F6FED222FB5F3B00E18769 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		E4F6FED422FB5F6500E18769 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		E4F6FED722FB685F00E18769 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E4F6FED922FCB54E00E18769 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E7312345DA6A3DFC0DD10691 /* Pods-ApartFinderClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartFinderClient.release.xcconfig"; path = "Target Support Files/Pods-ApartFinderClient/Pods-ApartFinderClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,6 @@
 				0CFE59116D065579B64A11FE /* Pods-ApartFinderClient.debug.xcconfig */,
 				E7312345DA6A3DFC0DD10691 /* Pods-ApartFinderClient.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,27 +88,43 @@
 		E410764522F8D0D400EB3EBB /* ApartFinderClient */ = {
 			isa = PBXGroup;
 			children = (
-				E4F6FED622FB684B00E18769 /* DataService */,
 				E410764622F8D0D400EB3EBB /* AppDelegate.swift */,
-				E410764822F8D0D400EB3EBB /* ViewController.swift */,
-				E410764A22F8D0D400EB3EBB /* Main.storyboard */,
-				E410764D22F8D0D500EB3EBB /* Assets.xcassets */,
-				E410764F22F8D0D500EB3EBB /* LaunchScreen.storyboard */,
-				E410765222F8D0D500EB3EBB /* Info.plist */,
-				E4F6FECE22FB5EE800E18769 /* Login.storyboard */,
-				E4F6FED022FB5F0100E18769 /* LoginViewController.swift */,
 				E4F6FED222FB5F3B00E18769 /* AppStoryboard.swift */,
-				E4F6FED422FB5F6500E18769 /* UIViewController.swift */,
+				E4F6FEDF22FCB99B00E18769 /* Controller */,
+				E4F6FEDE22FCB98100E18769 /* Storyboard */,
+				E4F6FEE022FCB9AD00E18769 /* Extension */,
+				E410764D22F8D0D500EB3EBB /* Assets.xcassets */,
+				E410765222F8D0D500EB3EBB /* Info.plist */,
 			);
 			path = ApartFinderClient;
 			sourceTree = "<group>";
 		};
-		E4F6FED622FB684B00E18769 /* DataService */ = {
+		E4F6FEDE22FCB98100E18769 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E4F6FED722FB685F00E18769 /* DataService.swift */,
+				E410764F22F8D0D500EB3EBB /* LaunchScreen.storyboard */,
+				E4F6FECE22FB5EE800E18769 /* Login.storyboard */,
+				E410764A22F8D0D400EB3EBB /* Main.storyboard */,
 			);
-			path = DataService;
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E4F6FEDF22FCB99B00E18769 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E410764822F8D0D400EB3EBB /* ViewController.swift */,
+				E4F6FED022FB5F0100E18769 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4F6FEE022FCB9AD00E18769 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6FED422FB5F6500E18769 /* UIViewController.swift */,
+				E4F6FED922FCB54E00E18769 /* UIApplication.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F6FED322FB5F3B00E18769 /* AppStoryboard.swift in Sources */,
+				E4F6FEDA22FCB54E00E18769 /* UIApplication.swift in Sources */,
 				E4F6FED122FB5F0100E18769 /* LoginViewController.swift in Sources */,
 				E410764922F8D0D400EB3EBB /* ViewController.swift in Sources */,
-				E4F6FED822FB685F00E18769 /* DataService.swift in Sources */,
 				E410764722F8D0D400EB3EBB /* AppDelegate.swift in Sources */,
 				E4F6FED522FB5F6500E18769 /* UIViewController.swift in Sources */,
 			);
