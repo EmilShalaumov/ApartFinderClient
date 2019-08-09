@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
                 if (jsonData.value(forKey: "responseString") as! String) == "success" {
                     AppDelegate.token = (jsonData.value(forKey: "sessionToken") as! NSDictionary)
                         .value(forKey: "tokenString") as? String
-                    UIApplication.setRootView(ViewController.instantiate(from: .Main))
+                    UIApplication.setRootView(UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!)
                 } else {
                     let alert = UIAlertController(title: "Login error", message: "Try again.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

@@ -31,11 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.token = nil
         
         if AppDelegate.token != nil {
-            let mainViewController = ViewController.instantiate(from: .Main)
+            let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
             self.window?.rootViewController = mainViewController
             AppDelegate.token = nil
         } else {
-            let loginViewController = LoginViewController.instantiate(from: .Login)
+            let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
             self.window?.rootViewController = loginViewController
             AppDelegate.token = "aaa"
         }
