@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         let parameters = ["username": usernameTextField.text!,
                           "password": passwordTextField.text!]
 
-        AF.request(LOG_IN_URL, method: .get, parameters: parameters).responseJSON { response in
+        AF.request(LOG_IN_URL, method: .post, parameters: parameters).responseJSON { response in
             print(response)
             
             if let result = response.value {

@@ -7,14 +7,35 @@
 //
 
 import UIKit
+import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let LOG_IN_URL = AppDelegate.DATA_SERVICE_URL + "/main/apartments"
+        let parameters = ["tokenstring": AppDelegate.token!]
+        print(LOG_IN_URL)
+        print(parameters)
+        
+        AF.request(LOG_IN_URL, method: .post, parameters: parameters).responseJSON {
+            response in
+            
+            print(response)
+        }
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ApartCell") {
+            return cell
+        }
+        return UITableViewCell()
+    }
 }
 
