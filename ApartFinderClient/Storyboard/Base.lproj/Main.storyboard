@@ -10,21 +10,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ApartFinderClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.18039215689999999" green="0.52941176469999995" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="KMF-R0-D10"/>
+                    <tabBarItem key="tabBarItem" title="HOME" id="KMF-R0-D10"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="41.829085457271368"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="L4l-7O-Z35">
+            <objects>
+                <viewController storyboardIdentifier="MenuVC" title="Menu" id="Sqe-ex-OUF" customClass="MenuVC" customModule="ApartFinderClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dr8-U1-Ul4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsE-Fu-c7Y">
+                                <rect key="frame" x="8" y="40" width="359" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutBtnPressed:" destination="Sqe-ex-OUF" eventType="touchUpInside" id="ypX-Ev-1T8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1333333333" green="0.65098039220000004" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GsE-Fu-c7Y" firstAttribute="top" secondItem="Sa8-5X-cP9" secondAttribute="top" constant="20" id="6TR-QF-3qy"/>
+                            <constraint firstItem="GsE-Fu-c7Y" firstAttribute="leading" secondItem="Sa8-5X-cP9" secondAttribute="leading" constant="8" id="e8Q-JY-6av"/>
+                            <constraint firstItem="Sa8-5X-cP9" firstAttribute="trailing" secondItem="GsE-Fu-c7Y" secondAttribute="trailing" constant="8" id="qe3-WE-y85"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sa8-5X-cP9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MENU" id="Qut-II-HFk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6M-Ql-g3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="863"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ed3-U0-2kG">
@@ -32,11 +63,13 @@
                 <tabBarController storyboardIdentifier="InitialTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="uhz-5i-V8r" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uu5-ku-2Cv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zSN-Oi-p3Y"/>
+                        <segue destination="Sqe-ex-OUF" kind="relationship" relationship="viewControllers" id="K88-mr-4Fj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jen-of-wjY" userLabel="First Responder" sceneMemberID="firstResponder"/>

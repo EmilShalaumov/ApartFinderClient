@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    public static let DATA_SERVICE_URL = "http://localhost:8080"
+    public static let DATA_SERVICE_URL = "http://192.168.0.102:8080"
     
     public static var token: String? {
         get {
@@ -28,16 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
         
-        AppDelegate.token = nil
-        
         if AppDelegate.token != nil {
-            let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
-            self.window?.rootViewController = mainViewController
-            AppDelegate.token = nil
+                //UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+            self.window?.rootViewController = AppStoryboard.instantiate(.Main)
         } else {
-            let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
-            self.window?.rootViewController = loginViewController
-            AppDelegate.token = "aaa"
+                //UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
+            self.window?.rootViewController = AppStoryboard.instantiate(.Login)
         }
         
         self.window?.makeKeyAndVisible()
