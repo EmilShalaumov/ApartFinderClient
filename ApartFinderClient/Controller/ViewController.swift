@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,10 +21,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(LOG_IN_URL)
         print(parameters)
         
-        AF.request(LOG_IN_URL, method: .post, parameters: parameters).responseJSON {
-            response in
-            
-            print(response)
+        AF.request(LOG_IN_URL, method: .post, parameters: parameters).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                if AppDelegate.token == json["sessionToken"]["tokenString"].string {
+                    print("It's okay")
+                }
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     

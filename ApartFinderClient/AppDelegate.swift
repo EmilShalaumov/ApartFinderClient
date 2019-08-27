@@ -28,12 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
         
-        if AppDelegate.token != nil {
+        if AppDelegate.token == nil {
                 //UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
-            self.window?.rootViewController = AppStoryboard.instantiate(.Main)
+            self.window?.rootViewController = AppStoryboard.instantiate(.Login)
         } else {
                 //UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
-            self.window?.rootViewController = AppStoryboard.instantiate(.Login)
+            self.window?.rootViewController = AppStoryboard.instantiate(.Main)
         }
         
         self.window?.makeKeyAndVisible()
